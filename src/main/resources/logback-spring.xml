@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <!-- デフォルト設定読み込み -->
+  <include
+    resource="org/springframework/boot/logging/logback/defaults.xml"/>
+  <include
+    resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+  <!-- show orm logs -->
+  <logger name="org.springframework.data.r2dbc" level="DEBUG" additivity="false">
+    <appender-ref ref="CONSOLE"/>
+  </logger>
+
+  <!-- show orm logs -->
+  <logger name="io.r2dbc.postgresql.QUERY" level="DEBUG" additivity="false">
+    <appender-ref ref="CONSOLE"/>
+  </logger>
+
+  <!-- show orm logs -->
+  <logger name="io.r2dbc.postgresql.PARAM" level="DEBUG" additivity="false">
+    <appender-ref ref="CONSOLE"/>
+  </logger>
+
+  <!-- show webclient -->
+  <logger name="org.springframework.web.reactive.function.client.WebClient" level="DEBUG"
+    additivity="false">
+    <appender-ref ref="CONSOLE"/>
+  </logger>
+
+  <!-- 開発範囲をデバッグレベルにしファイルに出力したい場合 -->
+  <logger name="com.tokkyokun" level="DEBUG" additivity="false">
+    <appender-ref ref="CONSOLE"/>
+  </logger>
+
+  <!-- ルートのログ出力設定 -->
+  <root level="INFO">
+    <appender-ref ref="CONSOLE"/>
+  </root>
+</configuration>
