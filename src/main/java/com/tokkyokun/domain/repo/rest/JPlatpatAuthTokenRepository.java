@@ -1,15 +1,12 @@
 package com.tokkyokun.domain.repo.rest;
 
-import com.tokkyokun.domain.model.rest.AuthTokenResponse;
+import com.tokkyokun.domain.model.rest.JPlatpatAuthToken;
 import reactor.core.publisher.Mono;
 
 public interface JPlatpatAuthTokenRepository {
 
-    String BASE_URL = "https://ip-data.jpo.go.jp";
+    Mono<JPlatpatAuthToken> fetchAccessToken();
 
-    Mono<AuthTokenResponse> fetchAccessToken();
-
-    Mono<AuthTokenResponse> fetchAccessTokenByRefreshToken(String refreshToken);
-
+    Mono<JPlatpatAuthToken> fetchAccessTokenByRefreshToken(String refreshToken);
 
 }

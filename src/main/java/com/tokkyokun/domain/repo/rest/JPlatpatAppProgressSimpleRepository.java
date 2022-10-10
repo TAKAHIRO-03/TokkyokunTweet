@@ -1,11 +1,11 @@
 package com.tokkyokun.domain.repo.rest;
 
+import com.tokkyokun.domain.model.rest.JPlatpatAppProgressSimple;
 import reactor.core.publisher.Mono;
 
 public interface JPlatpatAppProgressSimpleRepository {
 
-    String URL = "https://ip-data.jpo.go.jp";
-
-    Mono<String> fetchAppProgressSimpleByDocNum(String accessToken, Integer docNum);
+    Mono<JPlatpatAppProgressSimple> fetchAppProgressSimpleByDocNum(String accessToken,
+        Integer docNum);
 
 }

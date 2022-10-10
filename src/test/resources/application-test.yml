@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: tokkyokun #app name
+  profiles:
+    active: ${PROFILE:local} #profile
+  main:
+    web-application-type: none
