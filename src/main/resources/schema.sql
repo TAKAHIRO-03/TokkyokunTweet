@@ -1,6 +1,8 @@
 BEGIN;
 
 DROP TABLE IF EXISTS public.upd_search_mstr CASCADE;
+DROP TABLE IF EXISTS public.tweet_patent_data CASCADE;
+DROP TABLE IF EXISTS public.tweet_patent_data_img CASCADE;
 
 -- サーチマスタ
 CREATE TABLE IF NOT EXISTS public.upd_search_mstr
@@ -50,7 +52,7 @@ CREATE TABLE IF NOT EXISTS public.tweet_patent_data
     invent_title           TEXT               DEFAULT '' NOT NULL,
     summary                TEXT               DEFAULT '' NOT NULL,
     is_tweeted             BOOL      NOT NULL DEFAULT 'FALSE',
-    representative_diagram BYTEA NOT NULL,
+    representative_diagram BYTEA     NOT NULL,
     num_of_references      SMALLINT  NOT NULL,
     created_at             TIMESTAMP NOT NULL DEFAULT CURRENT_DATE,
     updated_at             TIMESTAMP NOT NULL DEFAULT CURRENT_DATE
@@ -70,12 +72,24 @@ COMMENT ON COLUMN public.tweet_patent_data.summary IS '要約';
 
 COMMENT ON COLUMN public.tweet_patent_data.is_tweeted IS 'ツイート済みか否か';
 
-COMMENT ON COLUMN public.tweet_patent_data.representative_diagram IS '代表図';
-
 COMMENT ON COLUMN public.tweet_patent_data.num_of_references IS '引用数';
 
 COMMENT ON COLUMN public.tweet_patent_data.created_at IS '作成日';
 
 COMMENT ON COLUMN public.tweet_patent_data.updated_at IS '更新日';
+
+-- ツイート特許データ画像
+CREATE TABLE IF NOT EXISTS public.tweet_patent_data_img
+(
+    tweet_patent_data_id   BIGINT PRIMARY KEY,
+    representative_diagram BYTEA NOT NULL,
+    FOREIGN KEY (tweet_patent_data_id) REFERENCES tweet_patent_data (tweet_patent_data_id)
+);
+
+COMMENT ON TABLE public.tweet_patent_data_img IS 'ツイート特許データ画像';
+
+COMMENT ON COLUMN public.tweet_patent_data_img.tweet_patent_data_id IS 'ID';
+
+COMMENT ON COLUMN public.tweet_patent_data_img.representative_diagram IS '代表図';
 
 COMMIT;
