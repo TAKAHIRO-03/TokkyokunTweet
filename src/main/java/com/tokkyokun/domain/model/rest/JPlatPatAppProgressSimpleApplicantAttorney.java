@@ -8,8 +8,8 @@ import org.jetbrains.annotations.NotNull;
 @Jacksonized
 @Builder
 @Value
-public class JPlatpatAppProgressSimpleApplicantAttorney implements
-    Comparable<JPlatpatAppProgressSimpleApplicantAttorney> {
+public class JPlatPatAppProgressSimpleApplicantAttorney implements
+    Comparable<JPlatPatAppProgressSimpleApplicantAttorney> {
 
     Long applicantAttorneyCd;
 
@@ -23,7 +23,7 @@ public class JPlatpatAppProgressSimpleApplicantAttorney implements
      * ${@inheritDoc}
      */
     @Override
-    public int compareTo(@NotNull final JPlatpatAppProgressSimpleApplicantAttorney o) {
+    public int compareTo(@NotNull final JPlatPatAppProgressSimpleApplicantAttorney o) {
         return Integer.compare(this.repeatNumber, o.getRepeatNumber());
     }
 }

@@ -1,6 +1,6 @@
 package com.tokkyokun.domain.repo.rest;
 
-import com.tokkyokun.domain.model.rest.JPlatpatAppProgressSimple;
+import com.tokkyokun.domain.model.rest.JPlatPatAppProgressSimple;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.jetbrains.annotations.NotNull;
@@ -11,8 +11,8 @@ import reactor.core.publisher.Mono;
 
 @Repository
 @RequiredArgsConstructor
-public class JPlatpatAppProgressSimpleRepositoryImpl implements
-    JPlatpatAppProgressSimpleRepository {
+public class JPlatPatAppProgressSimpleRepositoryImpl implements
+    JPlatPatAppProgressSimpleRepository {
 
     private final static String BASE_URL = "https://ip-data.jpo.go.jp";
 
@@ -21,14 +21,14 @@ public class JPlatpatAppProgressSimpleRepositoryImpl implements
     private final WebClient client;
 
     @Override
-    public Mono<JPlatpatAppProgressSimple> fetchAppProgressSimpleByDocNum(
+    public Mono<JPlatPatAppProgressSimple> fetchAppProgressSimpleByDocNum(
         @NonNull @NotNull final String accessToken, @NonNull @NotNull final Integer docNum) {
 
         return this.client.get().uri(BASE_URL + APP_PROGRESS_SIMPLE_URI + "/" + docNum)
             .headers(h -> h.setBearerAuth(accessToken))
             .accept(MediaType.APPLICATION_JSON)
             .retrieve()
-            .bodyToMono(JPlatpatAppProgressSimple.class);
+            .bodyToMono(JPlatPatAppProgressSimple.class);
 
     }
 }

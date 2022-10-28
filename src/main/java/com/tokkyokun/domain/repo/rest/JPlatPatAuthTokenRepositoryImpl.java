@@ -1,6 +1,6 @@
 package com.tokkyokun.domain.repo.rest;
 
-import com.tokkyokun.domain.model.rest.JPlatpatAuthToken;
+import com.tokkyokun.domain.model.rest.JPlatPatAuthToken;
 import com.tokkyokun.util.EnvUtil;
 import java.net.URI;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +13,7 @@ import reactor.core.publisher.Mono;
 
 @Repository
 @RequiredArgsConstructor
-public class JPlatpatAuthTokenRepositoryImpl implements JPlatpatAuthTokenRepository {
+public class JPlatPatAuthTokenRepositoryImpl implements JPlatPatAuthTokenRepository {
 
     private final WebClient client;
 
@@ -24,23 +24,23 @@ public class JPlatpatAuthTokenRepositoryImpl implements JPlatpatAuthTokenReposit
     private final static String BASE_URL = "https://ip-data.jpo.go.jp";
 
     @Override
-    public Mono<JPlatpatAuthToken> fetchAccessToken() {
+    public Mono<JPlatPatAuthToken> fetchAccessToken() {
         return this.client.post().uri(URI.create(BASE_URL + AUTH_TOKEN_URI))
             .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_FORM_URLENCODED_VALUE)
             .body(BodyInserters.fromFormData("grant_type", "password")
                 .with("username", this.env.getJ_platpatUsername())
                 .with("password", this.env.getJ_platpatUsername()))
             .retrieve()
-            .bodyToMono(JPlatpatAuthToken.class);
+            .bodyToMono(JPlatPatAuthToken.class);
     }
 
     @Override
-    public Mono<JPlatpatAuthToken> fetchAccessTokenByRefreshToken(final String refreshToken) {
+    public Mono<JPlatPatAuthToken> fetchAccessTokenByRefreshToken(final String refreshToken) {
         return this.client.post().uri(URI.create(BASE_URL + AUTH_TOKEN_URI))
             .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_FORM_URLENCODED_VALUE)
             .body(BodyInserters.fromFormData("grant_type", "refresh_token")
                 .with("refresh_token", refreshToken))
             .retrieve()
-            .bodyToMono(JPlatpatAuthToken.class);
+            .bodyToMono(JPlatPatAuthToken.class);
     }
 }

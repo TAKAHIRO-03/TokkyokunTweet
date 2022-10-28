@@ -9,13 +9,13 @@ import lombok.extern.jackson.Jacksonized;
 @Jacksonized
 @Builder
 @Value
-public class JPlatpatAppProgressSimpleData {
+public class JPlatPatAppProgressSimpleData {
 
     Long applicationNumber;
 
     String inventionTitle;
 
-    List<JPlatpatAppProgressSimpleApplicantAttorney> applicantAttorney;
+    List<JPlatPatAppProgressSimpleApplicantAttorney> applicantAttorney;
 
     Integer filingDate;
 
