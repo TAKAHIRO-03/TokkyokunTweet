@@ -1,6 +1,7 @@
 package com.tokkyokun.domain.model.db;
 
 import java.sql.Timestamp;
+import java.util.List;
 import lombok.Builder;
 import lombok.NonNull;
 import lombok.Value;
@@ -43,15 +44,17 @@ public class TweetPatentData {
     @Column(value = "is_tweeted")
     boolean isTweeted;
 
-    @Column(value = "representative_diagram")
-    @NonNull
-    @NotNull
-    Byte representativeDiagram;
+    @Column(value = "num_of_references")
+    int numOfReferences;
 
     @Column(value = "created_at")
     Timestamp createdAt;
 
     @Column(value = "updated_at")
     Timestamp updatedAt;
+
+    @NonNull
+    @NotNull
+    List<TweetPatentDataImg> images;
 
 }

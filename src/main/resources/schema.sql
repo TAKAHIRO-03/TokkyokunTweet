@@ -46,16 +46,15 @@ COPY upd_search_mstr
 -- ツイート特許データ
 CREATE TABLE IF NOT EXISTS public.tweet_patent_data
 (
-    tweet_patent_data_id   BIGSERIAL PRIMARY KEY,
-    applicant              TEXT      NOT NULL,
-    app_dt                 INTEGER   NOT NULL,
-    invent_title           TEXT               DEFAULT '' NOT NULL,
-    summary                TEXT               DEFAULT '' NOT NULL,
-    is_tweeted             BOOL      NOT NULL DEFAULT 'FALSE',
-    representative_diagram BYTEA     NOT NULL,
-    num_of_references      SMALLINT  NOT NULL,
-    created_at             TIMESTAMP NOT NULL DEFAULT CURRENT_DATE,
-    updated_at             TIMESTAMP NOT NULL DEFAULT CURRENT_DATE
+    tweet_patent_data_id BIGSERIAL PRIMARY KEY,
+    applicant            TEXT      NOT NULL,
+    app_dt               INTEGER   NOT NULL,
+    invent_title         TEXT               DEFAULT '' NOT NULL,
+    summary              TEXT               DEFAULT '' NOT NULL,
+    is_tweeted           BOOL      NOT NULL DEFAULT 'FALSE',
+    num_of_references    SMALLINT  NOT NULL,
+    created_at           TIMESTAMP NOT NULL DEFAULT CURRENT_DATE,
+    updated_at           TIMESTAMP NOT NULL DEFAULT CURRENT_DATE
 );
 
 COMMENT ON TABLE public.tweet_patent_data IS 'ツイート特許データ';
