@@ -20,8 +20,6 @@ public class TweetPatentDataImg {
     Long tweetPatentDataId;
 
     @Column(value = "representative_diagram")
-    @NonNull
-    @NotNull
-    Byte representativeDiagram;
+    byte[] representativeDiagram;
 
 }

@@ -18,4 +18,6 @@ public class EnvUtil {
     @Value("${jplatpat.password}")
     private String jPlatPatPassword;
 
+    @Value("${tokkyokun.patentdata.basepath}")
+    private String tokkyokunPatentDataBasePath;
 }

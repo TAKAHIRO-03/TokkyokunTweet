@@ -5,3 +5,8 @@ spring:
     active: ${PROFILE:local} #profile
   main:
     web-application-type: none
+  flyway:
+    clean-on-validation-error: false
+jplatpat:
+  username: ${J_PLAT_PAT_USERNAME:username}
+  password: ${J_PLAT_PAT_PASSWORD:password}
