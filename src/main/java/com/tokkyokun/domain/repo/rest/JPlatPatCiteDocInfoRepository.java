@@ -1,6 +1,6 @@
 package com.tokkyokun.domain.repo.rest;
 
-import com.tokkyokun.domain.model.rest.JPlatPatAppProgressSimple;
+import com.tokkyokun.domain.model.rest.JPlatPatCiteDocInfo;
 import com.tokkyokun.util.EnvUtil;
 import lombok.NonNull;
 import org.jetbrains.annotations.NotNull;
@@ -10,26 +10,27 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 @Repository
-public class JPlatPatAppProgressSimpleRepository extends JPlatPatBaseRepository {
+public class JPlatPatCiteDocInfoRepository extends JPlatPatBaseRepository {
 
-    private final static String APP_PROGRESS_SIMPLE_URI = "/api/patent/v1/app_progress_simple";
+    private final static String CITE_DOC_INFO_URI = "/api/patent/v1/cite_doc_info";
 
-    public JPlatPatAppProgressSimpleRepository(final WebClient client, final EnvUtil env) {
+    public JPlatPatCiteDocInfoRepository(final WebClient client, final EnvUtil env) {
         super(client, env);
     }
 
-    public Mono<JPlatPatAppProgressSimple> fetchAppProgressSimpleByDocNum(
+    public Mono<JPlatPatCiteDocInfo> fetchCiteDocInfoByDocNum(
         @NonNull @NotNull final Integer docNum) {
 
         final var accessToken = getJPlatPatAuthToken();
         return accessToken.flatMap(x ->
-            this.client.get().uri(BASE_URL + APP_PROGRESS_SIMPLE_URI + "/" + docNum)
+            this.client.get().uri(BASE_URL + CITE_DOC_INFO_URI + "/" + docNum)
                 .headers(h -> h.setBearerAuth(x.accessToken()))
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
-                .bodyToMono(JPlatPatAppProgressSimple.class)
+                .bodyToMono(JPlatPatCiteDocInfo.class)
         );
 
     }
+
 
 }

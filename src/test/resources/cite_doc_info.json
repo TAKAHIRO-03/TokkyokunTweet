@@ -1,0 +1,153 @@
+{
+  "result": {
+    "statusCode": "100",
+    "errorMessage": "",
+    "remainAccessCount": "49",
+    "data": {
+      "applicationNumber": "2005133824",
+      "patentDoc": [
+        {
+          "draftDate": "20060404",
+          "citationType": "89",
+          "documentNumber": "JPA 407201256"
+        },
+        {
+          "draftDate": "20060404",
+          "citationType": "89",
+          "documentNumber": "JPA 406208433"
+        },
+        {
+          "draftDate": "20060404",
+          "citationType": "89",
+          "documentNumber": "JPA 406111695"
+        },
+        {
+          "draftDate": "20060404",
+          "citationType": "89",
+          "documentNumber": "JPA 406096639"
+        },
+        {
+          "draftDate": "20060404",
+          "citationType": "89",
+          "documentNumber": "JPA 405289811"
+        },
+        {
+          "draftDate": "20060404",
+          "citationType": "89",
+          "documentNumber": "JPA 405233141"
+        },
+        {
+          "draftDate": "20060404",
+          "citationType": "89",
+          "documentNumber": "JPU 405036623"
+        },
+        {
+          "draftDate": "20060404",
+          "citationType": "89",
+          "documentNumber": "JPU1403057617"
+        },
+        {
+          "draftDate": "20060404",
+          "citationType": "89",
+          "documentNumber": "JPA 410074429"
+        },
+        {
+          "draftDate": "20060404",
+          "citationType": "89",
+          "documentNumber": "JPA 409230993"
+        },
+        {
+          "draftDate": "20060404",
+          "citationType": "89",
+          "documentNumber": "JPA 408016292"
+        },
+        {
+          "draftDate": "20060404",
+          "citationType": "89",
+          "documentNumber": "JPA 407296670"
+        },
+        {
+          "draftDate": "20060404",
+          "citationType": "89",
+          "documentNumber": "JPA 407261899"
+        },
+        {
+          "draftDate": "20060404",
+          "citationType": "89",
+          "documentNumber": "JPA 361164547"
+        },
+        {
+          "draftDate": "20060824",
+          "citationType": "31",
+          "documentNumber": "JPA 407201256"
+        },
+        {
+          "draftDate": "20060824",
+          "citationType": "31",
+          "documentNumber": "JPA 406208433"
+        },
+        {
+          "draftDate": "20060824",
+          "citationType": "31",
+          "documentNumber": "JPA 406111695"
+        },
+        {
+          "draftDate": "20060824",
+          "citationType": "31",
+          "documentNumber": "JPA 406096639"
+        },
+        {
+          "draftDate": "20060824",
+          "citationType": "31",
+          "documentNumber": "JPA 405289811"
+        },
+        {
+          "draftDate": "20060824",
+          "citationType": "31",
+          "documentNumber": "JPA 405233141"
+        },
+        {
+          "draftDate": "20060824",
+          "citationType": "31",
+          "documentNumber": "JPU 405036623"
+        },
+        {
+          "draftDate": "20060824",
+          "citationType": "31",
+          "documentNumber": "JPU1403057617"
+        },
+        {
+          "draftDate": "20060824",
+          "citationType": "31",
+          "documentNumber": "JPA 410074429"
+        },
+        {
+          "draftDate": "20060824",
+          "citationType": "31",
+          "documentNumber": "JPA 409230993"
+        },
+        {
+          "draftDate": "20060824",
+          "citationType": "31",
+          "documentNumber": "JPA 408016292"
+        },
+        {
+          "draftDate": "20060824",
+          "citationType": "31",
+          "documentNumber": "JPA 407296670"
+        },
+        {
+          "draftDate": "20060824",
+          "citationType": "31",
+          "documentNumber": "JPA 407261899"
+        },
+        {
+          "draftDate": "20060824",
+          "citationType": "31",
+          "documentNumber": "JPA 361164547"
+        }
+      ],
+      "nonPatentDoc": []
+    }
+  }
+}

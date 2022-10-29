@@ -9,6 +9,6 @@ spring:
     password: ${spring.r2dbc.password}
     baseline-on-migrate: true
     clean-on-validation-error: true
-j-platpat:
-  username: ${J_PLATPAT_USERNAME:username}
-  password: ${J_PLATPAT_PASSWORD:password}
+jplatpat:
+  username: ${J_PLAT_PAT_USERNAME:username}
+  password: ${J_PLAT_PAT_PASSWORD:password}

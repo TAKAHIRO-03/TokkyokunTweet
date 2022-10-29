@@ -12,10 +12,10 @@ import org.springframework.stereotype.Component;
 @EqualsAndHashCode
 public class EnvUtil {
 
-    @Value("${j-platpat.username}")
-    private String j_platpatUsername;
+    @Value("${jplatpat.username}")
+    private String jPlatPatUsername;
 
-    @Value("${j-platpat.password}")
-    private String j_platpatPassword;
+    @Value("${jplatpat.password}")
+    private String jPlatPatPassword;
 
 }

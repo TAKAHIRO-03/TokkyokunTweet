@@ -1,6 +1,6 @@
 package com.tokkyokun.domain.model.rest;
 
 
-public record JPlatPatAppProgressSimple(JPlatPatAppProgressSimpleResult result) {
+public record JPlatPatAppProgressSimple(JPlatPatResult<JPlatPatAppProgressSimpleData> result) {
 
 }

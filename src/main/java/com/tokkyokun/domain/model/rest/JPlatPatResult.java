@@ -8,7 +8,7 @@ import lombok.extern.jackson.Jacksonized;
 @Jacksonized
 @Builder
 @Value
-public class JPlatPatAppProgressSimpleResult {
+public class JPlatPatResult<T> {
 
     int statusCode;
 
@@ -16,6 +16,6 @@ public class JPlatPatAppProgressSimpleResult {
 
     int remainAccessCount;
 
-    JPlatPatAppProgressSimpleData data;
+    T data;
 
 }
